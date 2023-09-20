@@ -29,4 +29,6 @@ Main files:
                  \             main.service                  |
                       \   v/^                 ^\v            V
              table.component <- students.component <- "students" route
-
+#Pictures
+![Alt text](/pics/1.jpg?raw=true "Groups page")
+![Alt text](/pics/2.jpg?raw=true "Students page")
