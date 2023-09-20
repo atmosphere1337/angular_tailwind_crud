@@ -9,17 +9,28 @@ import { MainService } from '../service/main.service';
   standalone: true,
   imports: [CommonModule, RouterLink, TableComponent],
   template: `
-    <h1>
-      Группа № {{groupNumber}}
-    </h1>
+  <div class="h-screen bg-blue-900">
+    <div class="ml-10 mt-10 p-5 bg-green-900 rounded-xl inline-block">
+      <h1 class="text-xl text-orange-500 font-bold">
+        Группа № {{groupNumber}}
+      </h1>
       <app-table mode="students" [groupId]="groupId" [groupNumber]="groupNumber"></app-table>
-
       <div style="margin-bottom: 20px; margin-top: 20px">
         <input #addstudent class="bg-gray-500" />
-        <button (click)="addStudent_fnc(addstudent)">Принять нового студента</button>
+        <button (click)="addStudent_fnc(addstudent)" class="bg-green-500 px-3 ml-3 rounded hover:text-yellow-500">
+          Принять нового студента
+        </button>
       </div>
-      <div><button (click)="mainService.destroy_localstorage()">Откатить к начальному состоянию</button></div>
-    <div><a routerLink="">To_groups</a></div>
+      <div class="bg-red-900 inline-block p-1 rounded-lg hover:bg-red-500">
+        <button (click)="mainService.destroy_localstorage()">
+          Откатить к начальному состоянию
+        </button>
+      </div>
+      <div class="hover:text-yellow-500">
+        <a routerLink="">Назад к списку групп</a>
+      </div>
+    </div>
+  </div>
   `,
   styles: [
   ]

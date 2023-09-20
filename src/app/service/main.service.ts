@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
