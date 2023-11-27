@@ -32,3 +32,12 @@ Main files:
 #Pictures
 ![Alt text](/pics/1.jpg?raw=true "Groups page")
 ![Alt text](/pics/2.jpg?raw=true "Students page")
+
+
+Docker deploy (just Dockerfile this time)
+	1) npm install
+	2) npm run build
+	3) docker build -t tailwind .
+	4) docker run -p -d 80:80 --name tailwind tailwind
+
+
